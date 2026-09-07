@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlantis Addresses UN General Assembly | The Global Herald</title>
+    <style>
+        :root {
+            /* Single Accent Color */
+            --accent-color: #006B75; 
+            
+            /* Standard News Palette */
+            --bg-color: #FFFFFF;
+            --bg-alt: #F4F4F4;
+            --text-main: #1A1A1A;
+            --text-muted: #555555;
+            --border-color: #E2E2E2;
+            
+            /* Typography */
+            --font-headline: 'Georgia', Times, serif;
+            --font-body: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Top utility bar */
+        .top-bar {
+            background-color: var(--bg-alt);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.5rem 5%;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main Header */
+        header {
+            padding: 2rem 5%;
+            border-bottom: 4px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-headline);
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Breaking News Banner */
+        .breaking-banner {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 5%;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .breaking-label {
+            background-color: white;
+            color: var(--accent-color);
+            padding: 0.2rem 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Article Styling */
+        .article-category {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: var(--font-headline);
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .article-deck {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .byline {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .byline-info {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .byline-name {
+            font-weight: bold;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .hero-media {
+            width: 100%;
+            background-color: white
+            border: 0px solid var(--border-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .hero-media img {
+            width: 100%;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .hero-caption {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-caption span {
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        article p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+
+        .article-location {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .pull-quote {
+            font-family: var(--font-headline);
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-top: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Sidebar Styling */
+        .sidebar-section {
+            margin-bottom: 3rem;
+        }
+
+        .sidebar-header {
+            font-family: var(--font-headline);
+            font-size: 1.25rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-story {
+            display: block;
+            text-decoration: none;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .related-story:hover h4 {
+            color: var(--accent-color);
+        }
+
+        .related-story h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        .related-story span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Data Widget Styling */
+        .data-widget {
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-alt);
+            padding: 1.5rem;
+        }
+
+        .data-widget h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            font-family: monospace;
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .data-status {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--bg-alt);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 5%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .logo {
+                font-size: 2.5rem;
+            }
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>Monday, September 7, 2026</span>
+        <span>Edition: Global</span>
+    </div>
+
+    <header>
+        <div class="logo">The Global Herald</div>
+        <nav>
+            <a href="#">World</a>
+            <a href="#">Politics</a>
+            <a href="#">Business</a>
+            <a href="#">Science & Climate</a>
+            <a href="#">Investigations</a>
+        </nav>
+    </header>
+
+    <div class="breaking-banner">
+        <span class="breaking-label">Live Updates</span>
+        <span>United Nations General Assembly suspends normal proceedings as Atlantean delegation presents formal grievance.</span>
+    </div>
+
+    <div class="container">
+        <main>
+            <article>
+                <span class="article-category">Global Diplomacy</span>
+                
+                <h1>Not a secret anymore: Atlantis goes all in on marketing</h1>
+                
+                <div class="article-deck">
+                    After an unprecedented reveal on the world stage, Atlantis launches a massive marketing campaign.
+                </div>
+
+                <div class="byline">
+                    <div class="byline-info">
+                        By <a href="#" class="byline-name">Elena Rostova</a><br>
+                        Published September 7, 2026 • Updated 12 minutes ago
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <!-- A standard gray placeholder representing the UN broadcast -->
+                    <img src="bill.png" alt="Live UN Broadcast">
+                </div>
+                <div class="hero-caption">
+                    <span>CREDIT: UN WEB TV</span> | Digital billboards at Time Square, Manhattan display the Atlantis logo. 
+                </div>
+
+                <p><span class="article-location">UNITED NATIONS, New York</span> — The months of cryptic sonar leaks, unexplained coastal anomalies, and the rising tide of the grassroots 'Surfacers' protest movement culminated today in an event that has permanently altered the geopolitical landscape. The sovereign state of Atlantis has formally revealed itself to the surface world.</p>
+
+                <p>However, the anticipated first contact scenario quickly dissolved into something much starker. The Atlantean delegation did not arrive in New York seeking a peace treaty, trade negotiations, or cultural exchange. They arrived to file a formal, comprehensively documented grievance.</p>
+
+                <p>In a globally synchronized broadcast that overtook major commercial displays in Times Square, Piccadilly Circus, and Shibuya Crossing, the delegates assumed their newly arranged seats at the UN. Their opening remarks bypassed traditional diplomatic pleasantries entirely.</p>
+
+                <div class="pull-quote">
+                    "We have not emerged to ask for a seat at your table. We have taken one because the roof of our world has become a mass grave."
+                </div>
+
+                <p>The primary focus of the address was not their technology or their hidden history, but a meticulously compiled presentation of marine extinction. Referred to in previously leaked documents as the "Evidence Wall," a massive data visualization was projected behind the delegation, ticking through millions of data points tracking pollution, habitat collapse, and species loss dating back two centuries.</p>
+
+                <p>The tone struck by the delegates was one of composed, state-level patience that has finally run out. Analysts are already noting that the Atlantean representatives framed the loss of ocean biodiversity not merely as an environmental tragedy, but as a deliberate and prolonged attack on their shared borders.</p>
+
+                <p>As the emergency session continues, the digital wall behind the delegates relentlessly fills with the scientific names of extinct species—a scrolling testament leaving the assembly hall in stunned silence.</p>
+            </article>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <h2 class="sidebar-header">Latest Coverage</h2>
+                
+                <a href="#" class="related-story">
+                    <h4>Timeline: From the Sonar Leaks to the 'Surfacers' Cult</h4>
+                    <span>2 hours ago</span>
+                </a>
+                
+                <a href="#" class="related-story">
+                    <h4>Market Panic: Global Shipping and Deep-Sea Mining Stocks Plummet</h4>
+                    <span>4 hours ago</span>
+                </a>
+                
+                <a href="#" class="related-story">
+                    <h4>Decoding the Symbols: What the Evolving Trident Means for Statehood</h4>
+                    <span>6 hours ago</span>
+                </a>
+            </div>
+
+            <div class="data-widget">
+                <h3>Live: The 'Evidence Ledger' Data Stream</h3>
+                <div class="data-row">
+                    <span>Eretmochelys imbricata</span>
+                    <span class="data-status">EXTINCT</span>
+                </div>
+                <div class="data-row">
+                    <span>Monachus tropicalis</span>
+                    <span class="data-status">EXTINCT</span>
+                </div>
+                <div class="data-row">
+                    <span>Acropora cervicornis</span>
+                    <span class="data-status">CRITICAL</span>
+                </div>
+                <div class="data-row">
+                    <span>Hydrodamalis gigas</span>
+                    <span class="data-status">EXTINCT</span>
+                </div>
+                <div style="font-size: 0.8rem; text-align: center; margin-top: 1.5rem; color: var(--text-muted);">
+                    Data sourced from live UN projection. Over 4,300 species logged in the current session.
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Global Herald. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy.</p>
+    </footer>
+
+</body>
+</html>

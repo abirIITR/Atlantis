@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DeepSeaAnomalies.net :: View Topic - Sonar techs, what am I looking at??</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    background: #dfe4ea url('data:image/png;base64,') repeat-x top;
+    background-color: #c2cddb;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size: 11px;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 20px 0 60px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 10px; }
+
+  /* header bar */
+  .sitebar {
+    background: #2b4a6f;
+    background: linear-gradient(#3a5f8a, #24405f);
+    border: 1px solid #17293d;
+    border-radius: 4px 4px 0 0;
+    padding: 10px 14px;
+    color: #eaf0f7;
+  }
+  .sitebar .logo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  }
+  .sitebar .tagline { font-size: 10px; color: #b9cbe0; margin-top: 2px; }
+
+  .navbar {
+    background: #e8edf3;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .navbar a { color: #1d4e89; text-decoration: none; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar .crumbs { color: #55606b; }
+  .navbar .right { float: right; color: #55606b; }
+  .navbar .right a { margin-left: 8px; }
+
+  .clear { clear: both; }
+
+  /* thread meta strip */
+  .threadmeta {
+    background: #f4f6f9;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    padding: 6px 10px;
+    font-size: 11px;
+    color: #55606b;
+  }
+  .threadmeta strong { color: #2b2b2b; }
+  .threadmeta .stats { float: right; }
+
+  h1.topic-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a2f45;
+    background: #f4f6f9;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    margin: 0;
+    padding: 8px 10px 4px;
+  }
+
+  /* post table */
+  table.posts {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    background: #ffffff;
+  }
+  table.posts tr.postrow { border-top: 1px solid #cdd7e2; }
+  table.posts tr.alt { background: #f0f3f7; }
+
+  td.userinfo {
+    width: 150px;
+    vertical-align: top;
+    padding: 10px;
+    background: #e8edf3;
+    border-right: 1px solid #cdd7e2;
+    text-align: center;
+  }
+  td.userinfo .uname {
+    font-weight: bold;
+    color: #1d4e89;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  td.userinfo .uname.op { color: #a4380a; }
+  td.userinfo .rank {
+    font-size: 9px;
+    color: #8a95a1;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  td.userinfo .avatar {
+    width: 60px; height: 60px;
+    background: #b9c4d0;
+    border: 1px solid #94a2b3;
+    margin: 0 auto 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5b6675;
+    font-size: 22px;
+    font-family: Georgia, serif;
+  }
+  td.userinfo .meta {
+    text-align: left;
+    font-size: 9px;
+    color: #6b7684;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+  td.userinfo .meta b { color: #4a5561; }
+
+  td.postbody { vertical-align: top; padding: 10px 14px; }
+  .postheader {
+    font-size: 10px;
+    color: #7a8593;
+    border-bottom: 1px dotted #cdd7e2;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+  .postheader .postnum { float: right; color: #9aa5b1; }
+  .postheader .postnum a { color: #9aa5b1; text-decoration: none; }
+
+  .posttext { font-size: 12px; line-height: 1.5; color: #24303d; }
+  .posttext p { margin: 0 0 8px; }
+
+  blockquote.q {
+    background: #eef1f5;
+    border-left: 3px solid #9aacc0;
+    margin: 8px 0;
+    padding: 6px 10px;
+    font-size: 11px;
+    color: #4a5561;
+  }
+  blockquote.q cite {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    color: #6b7684;
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+
+  .attach {
+    margin-top: 10px;
+    border: 1px solid #cdd7e2;
+    background: #f7f8fa;
+    padding: 8px;
+    font-size: 10px;
+    color: #6b7684;
+    display: inline-block;
+  }
+  .attach .thumb {
+    width: 220px; height: 140px;
+    background: repeating-linear-gradient(45deg, #333 0, #333 2px, #111 2px, #111 6px);
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7fef7f;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    text-align: center;
+  }
+  .attach a { color: #1d4e89; }
+
+  .postfooter {
+    margin-top: 10px;
+    padding-top: 6px;
+    border-top: 1px dotted #cdd7e2;
+    font-size: 10px;
+  }
+  .postfooter .sig { color: #8a95a1; font-style: italic; }
+  .postfooter .actions { float: right; }
+  .postfooter .actions a {
+    color: #55606b;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 1px 6px;
+    border: 1px solid #cdd7e2;
+    background: #eef1f5;
+    border-radius: 2px;
+  }
+
+  .edited { color: #b08a2e; font-size: 9px; margin-top: 4px; font-style: italic; }
+
+  .quickreply {
+    background: #e8edf3;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    padding: 10px;
+    font-size: 11px;
+    color: #55606b;
+    border-radius: 0 0 4px 4px;
+  }
+  .quickreply textarea {
+    width: 100%;
+    height: 50px;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    border: 1px inset #a9b8c9;
+    padding: 4px;
+    resize: none;
+    background: #fff;
+  }
+  .quickreply .btnrow { margin-top: 6px; }
+  .quickreply button {
+    font-size: 11px;
+    padding: 3px 12px;
+    background: linear-gradient(#f7f8fa, #dde3ea);
+    border: 1px solid #9aacc0;
+    border-radius: 3px;
+    color: #24303d;
+  }
+
+  .pagejump { text-align: center; margin-top: 8px; font-size: 11px; color: #55606b; }
+  .pagejump a { color: #1d4e89; text-decoration: none; margin: 0 3px; }
+  .pagejump .current { font-weight: bold; color: #24303d; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="sitebar">
+    <div class="logo">DeepSeaAnomalies.net</div>
+    <div class="tagline">unexplained &middot; unverified &middot; undersea &mdash; est. 2003</div>
+  </div>
+
+  <div class="navbar">
+    <span class="crumbs">Forum Index &raquo; Sonar &amp; Acoustic Anomalies &raquo; <strong>Sonar techs, what am I looking at??</strong></span>
+    <span class="right"><a href="#">Register</a> | <a href="#">Login</a> | <a href="#">Search</a> | <a href="#">FAQ</a></span>
+    <div class="clear"></div>
+  </div>
+
+  <h1 class="topic-title">Sonar techs, what am I looking at?? (composite img attached)</h1>
+
+  <div class="threadmeta">
+    Posted in: <strong>Sonar &amp; Acoustic Anomalies</strong>
+    <span class="stats">6,214 views &middot; 41 replies &middot; last post 14 min ago</span>
+    <div class="clear"></div>
+  </div>
+
+  <table class="posts">
+
+    <!-- POST 1 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">TW</div>
+        <div class="uname op">trawler_wife_82</div>
+        <div class="rank">New Member</div>
+        <div class="meta">
+          <b>Joined:</b> Mar 2011<br>
+          <b>Posts:</b> 3<br>
+          <b>Location:</b> Gloucester, MA
+        </div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">
+          Posted: Thu Apr 14, 2011 11:52 pm
+          <span class="postnum"><a href="#p1">#1</a></span>
+        </div>
+        <div class="posttext">
+          <p>ok so i don't really post here i mostly just read but my husband is a deckhand out of gloucester and he sent me this off his phone last night and told me not to tell anyone which obviously im not going to just sit on this</p>
+          <p>their sonar guy pulled this off the display during a run out past the trench, said the boat next to them AND another one about 40 min out got basically the same return around the same time. he said it wasn't fish. i don't know anything about reading these but he said in 6 years he's never seen a return move like that. formation just doesn't look random to me either??</p>
+          <div class="attach">
+            <div class="thumb">[ SONAR_COMPOSITE_0417.jpg<br>viewed 4,982 times ]</div>
+            <a href="#">SONAR_COMPOSITE_0417.jpg (212 KB)</a>
+          </div>
+          <p>he won't tell me the name of the boat because he's worried about getting in trouble with the company. sorry if that's annoying i know that's the first thing everyone always asks</p>
+        </div>
+        <div class="postfooter">
+          <span class="sig">&mdash; not a scientist, just relaying what i was sent</span>
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 2 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">SP</div>
+        <div class="uname">sonarping_actual</div>
+        <div class="rank">Senior Member</div>
+        <div class="meta">
+          <b>Joined:</b> Jan 2007<br>
+          <b>Posts:</b> 1,842<br>
+          <b>Location:</b> Norfolk, VA
+        </div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">
+          Posted: Fri Apr 15, 2011 12:31 am
+          <span class="postnum"><a href="#p2">#2</a></span>
+        </div>
+        <div class="posttext">
+          <blockquote class="q"><cite>trawler_wife_82 wrote:</cite>he said it wasn't fish. i don't know anything about reading these but he said in 6 years he's never seen a return move like that.</blockquote>
+          <p>Worked active sonar for 11 years, so take this for what it's worth. The formation in that crop isn't a bait ball, and it's too tight and too fast for a thermocline artifact. Could still be equipment ghosting depending on the rig, hard to say without the raw file.</p>
+          <p>What I will say is the spacing between the returns is oddly even. Biological contacts don't usually hold spacing like that unless something is herding them, or they're moving with intent as a group. Not saying I know what it is. Just saying it's a weird one.</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 3 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">DB</div>
+        <div class="uname">debunker_dan_</div>
+        <div class="rank">Member</div>
+        <div class="meta">
+          <b>Joined:</b> Sep 2009<br>
+          <b>Posts:</b> 412<br>
+          <b>Location:</b> ---
+        </div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">
+          Posted: Fri Apr 15, 2011 1:04 am
+          <span class="postnum"><a href="#p3">#3</a></span>
+        </div>
+        <div class="posttext">
+          <p>every single time. "my husband's coworker's sonar guy" and a jpeg compressed to death. no boat name, no vessel ID, no raw file, no depth log. this is the same thread as 2009 and 2006 and it'll be the same thread in 2014. thermocline bounce + bad jpeg + bored night shift.</p>
+          <p>not trying to be a jerk to OP specifically, this happens on this board like clockwork, someone always says "6 years and never seen anything like it" like that's not exactly what gets said every time</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 4 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">TW</div>
+        <div class="uname op">trawler_wife_82</div>
+        <div class="rank">New Member</div>
+        <div class="meta">
+          <b>Joined:</b> Mar 2011<br>
+          <b>Posts:</b> 3<br>
+          <b>Location:</b> Gloucester, MA
+        </div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">
+          Posted: Fri Apr 15, 2011 1:19 am
+          <span class="postnum"><a href="#p4">#4</a></span>
+        </div>
+        <div class="posttext">
+          <blockquote class="q"><cite>debunker_dan_ wrote:</cite>no boat name, no vessel ID, no raw file, no depth log.</blockquote>
+          <p>i get why you'd think that but i'm not asking anyone to believe me, i'm asking if anyone can explain the image. i didn't take the photo i can't give you a raw file i don't have one. i just thought this was the place to ask people who actually know sonar</p>
+          <p>also just talked to him again, he says the OTHER boat's guy is the one who said "it looked like it was waiting" not him, he doesn't want that getting attributed to him specifically</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 5 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">::</div>
+        <div class="uname">████████</div>
+        <div class="rank">Member</div>
+        <div class="meta">
+          <b>Joined:</b> ---<br>
+          <b>Posts:</b> 1<br>
+          <b>Location:</b> ---
+        </div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">
+          Posted: Fri Apr 15, 2011 3:47 am
+          <span class="postnum"><a href="#p5">#5</a></span>
+        </div>
+        <div class="posttext">
+          <p>you should stop asking about this here</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+        <div class="edited">This account has been banned. Reason: N/A</div>
+      </td>
+    </tr>
+
+    <!-- POST 6 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">SP</div>
+        <div class="uname">sonarping_actual</div>
+        <div class="rank">Senior Member</div>
+        <div class="meta">
+          <b>Joined:</b> Jan 2007<br>
+          <b>Posts:</b> 1,843<br>
+          <b>Location:</b> Norfolk, VA
+        </div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">
+          Posted: Fri Apr 15, 2011 4:02 am
+          <span class="postnum"><a href="#p6">#6</a></span>
+        </div>
+        <div class="posttext">
+          <blockquote class="q"><cite>████████ wrote:</cite>you should stop asking about this here</blockquote>
+          <p>...ok that's a new one. account created same day, one post, and it's THAT. anyone else's alarm bells going off or is it just me</p>
+          <p>OP if you get anything else off him, more crops, timestamps, depth readouts, post it. worth documenting even if it ends up being nothing</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class="quickreply">
+    Quick Reply:
+    <textarea placeholder="You must be logged in to post a reply."></textarea>
+    <div class="btnrow"><button disabled>Submit Reply</button></div>
+  </div>
+
+  <div class="pagejump">
+    Page 1 of 5 &nbsp; <a href="#">&laquo;</a> <span class="current">1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">&raquo;</a>
+  </div>
+
+</div>
+</body>
+</html>
