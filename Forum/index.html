@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DeepSeaAnomalies.net :: View Topic - ok these posters are freaking me out</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    background-color: #c2cddb;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size: 11px;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 20px 0 60px;
+  }
+  .wrap { max-width: 950px; margin: 0 auto; padding: 0 10px; }
+
+  .sitebar {
+    background: linear-gradient(#3a5f8a, #24405f);
+    border: 1px solid #17293d;
+    border-radius: 4px 4px 0 0;
+    padding: 10px 14px;
+    color: #eaf0f7;
+  }
+  .sitebar .logo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  }
+  .sitebar .tagline { font-size: 10px; color: #b9cbe0; margin-top: 2px; }
+
+  .navbar {
+    background: #e8edf3;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .navbar a { color: #1d4e89; text-decoration: none; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar .crumbs { color: #55606b; }
+  .navbar .right { float: right; color: #55606b; }
+  .navbar .right a { margin-left: 8px; }
+  .clear { clear: both; }
+
+  .threadmeta {
+    background: #f4f6f9;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    padding: 6px 10px;
+    font-size: 11px;
+    color: #55606b;
+  }
+  .threadmeta .stats { float: right; }
+
+  h1.topic-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a2f45;
+    background: #f4f6f9;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    margin: 0;
+    padding: 8px 10px 4px;
+  }
+
+  table.posts {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #a9b8c9;
+    border-top: none;
+    background: #ffffff;
+  }
+  table.posts tr.postrow { border-top: 1px solid #cdd7e2; }
+  table.posts tr.alt { background: #f0f3f7; }
+
+  td.userinfo {
+    width: 145px;
+    vertical-align: top;
+    padding: 10px;
+    background: #e8edf3;
+    border-right: 1px solid #cdd7e2;
+    text-align: center;
+  }
+  td.userinfo .uname { font-weight: bold; color: #1d4e89; font-size: 12px; margin-bottom: 4px; }
+  td.userinfo .uname.op { color: #a4380a; }
+  td.userinfo .rank { font-size: 9px; color: #8a95a1; font-style: italic; margin-bottom: 6px; }
+  td.userinfo .avatar {
+    width: 56px; height: 56px;
+    background: #b9c4d0;
+    border: 1px solid #94a2b3;
+    margin: 0 auto 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: #5b6675; font-size: 20px; font-family: Georgia, serif;
+  }
+  td.userinfo .meta { text-align: left; font-size: 9px; color: #6b7684; line-height: 1.5; margin-top: 4px; }
+  td.userinfo .meta b { color: #4a5561; }
+
+  td.postbody { vertical-align: top; padding: 10px 14px; }
+  .postheader {
+    font-size: 10px; color: #7a8593;
+    border-bottom: 1px dotted #cdd7e2;
+    padding-bottom: 5px; margin-bottom: 8px;
+  }
+  .postheader .postnum { float: right; color: #9aa5b1; }
+  .postheader .postnum a { color: #9aa5b1; text-decoration: none; }
+
+  .posttext { font-size: 12px; line-height: 1.5; color: #24303d; }
+  .posttext p { margin: 0 0 8px; }
+
+  blockquote.q {
+    background: #eef1f5;
+    border-left: 3px solid #9aacc0;
+    margin: 8px 0; padding: 6px 10px;
+    font-size: 11px; color: #4a5561;
+  }
+  blockquote.q cite { display: block; font-style: normal; font-weight: bold; color: #6b7684; font-size: 10px; margin-bottom: 3px; }
+
+  .attachrow { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .attach {
+    border: 1px solid #cdd7e2;
+    background: #f7f8fa;
+    padding: 6px;
+    font-size: 9.5px;
+    color: #6b7684;
+    display: inline-block;
+    width: 160px;
+  }
+  .attach img { width: 100%; height: 190px; object-fit: cover; display: block; border: 1px solid #000; margin-bottom: 4px; }
+  .attach .fname { color: #1d4e89; word-break: break-all; }
+  .attach .viewcount { color: #9aa5b1; margin-top: 2px; }
+
+  .postfooter { margin-top: 10px; padding-top: 6px; border-top: 1px dotted #cdd7e2; font-size: 10px; }
+  .postfooter .sig { color: #8a95a1; font-style: italic; }
+  .postfooter .actions { float: right; }
+  .postfooter .actions a {
+    color: #55606b; text-decoration: none; margin-left: 10px; padding: 1px 6px;
+    border: 1px solid #cdd7e2; background: #eef1f5; border-radius: 2px;
+  }
+  .edited { color: #b08a2e; font-size: 9px; margin-top: 4px; font-style: italic; }
+
+  .quickreply {
+    background: #e8edf3; border: 1px solid #a9b8c9; border-top: none;
+    padding: 10px; font-size: 11px; color: #55606b; border-radius: 0 0 4px 4px;
+  }
+  .quickreply textarea {
+    width: 100%; height: 50px; font-family: Verdana, sans-serif; font-size: 11px;
+    border: 1px inset #a9b8c9; padding: 4px; resize: none; background: #fff;
+  }
+  .quickreply .btnrow { margin-top: 6px; }
+  .quickreply button {
+    font-size: 11px; padding: 3px 12px;
+    background: linear-gradient(#f7f8fa, #dde3ea);
+    border: 1px solid #9aacc0; border-radius: 3px; color: #24303d;
+  }
+
+  .pagejump { text-align: center; margin-top: 8px; font-size: 11px; color: #55606b; }
+  .pagejump a { color: #1d4e89; text-decoration: none; margin: 0 3px; }
+  .pagejump .current { font-weight: bold; color: #24303d; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="sitebar">
+    <div class="logo">DeepSeaAnomalies.net</div>
+    <div class="tagline">unexplained &middot; unverified &middot; undersea &mdash; est. 2003</div>
+  </div>
+
+  <div class="navbar">
+    <span class="crumbs">Forum Index &raquo; Off Topic / Weird Stuff &raquo; <strong>ok these posters are freaking me out</strong></span>
+    <span class="right"><a href="#">Register</a> | <a href="#">Login</a> | <a href="#">Search</a> | <a href="#">FAQ</a></span>
+    <div class="clear"></div>
+  </div>
+
+  <h1 class="topic-title">ok these posters are freaking me out, has anyone else seen these around town??</h1>
+
+  <div class="threadmeta">
+    Posted in: <strong>Off Topic / Weird Stuff</strong>
+    <span class="stats">14,902 views &middot; 63 replies &middot; last post 6 min ago</span>
+    <div class="clear"></div>
+  </div>
+
+  <table class="posts">
+
+    <!-- POST 1 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">FG</div>
+        <div class="uname op">fishguy94</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> Feb 2019<br><b>Posts:</b> 87<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Mon Jun 02, 2026 9:14 pm <span class="postnum"><a href="#p1">#1</a></span></div>
+        <div class="posttext">
+          <p>ok so idk if this is the right subforum but somebody plastered these on like every lamppost near the docks overnight?? no name, no company, nothing. just showed up. my buddy who works nights said the guys putting these up didn't say a word to anyone and left before sunrise</p>
+          <p>been hearing weird rumors too about dead fish washing up further down the coast, figured i'd ask if anyone here knows anything actual or if this is just some ARG marketing thing</p>
+          <div class="attachrow">
+            <div class="attach">
+              <img src="poster1.png" alt="poster">
+              <div class="fname">IMG_0442.jpg</div>
+              <div class="viewcount">viewed 3,110 times</div>
+            </div>
+            <div class="attach">
+              <img src="poster2.png" alt="poster">
+              <div class="fname">IMG_0443.jpg</div>
+              <div class="viewcount">viewed 2,884 times</div>
+            </div>
+          </div>
+        </div>
+        <div class="postfooter">
+          <span class="sig">— sorry for the bad quality, took these on my way to work</span>
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 2 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">MK</div>
+        <div class="uname">marina_k</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> Nov 2021<br><b>Posts:</b> 203<br><b>Location:</b> coastal, won't say more</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Mon Jun 02, 2026 9:41 pm <span class="postnum"><a href="#p2">#2</a></span></div>
+        <div class="posttext">
+          <p>omg not just your town. found TWO more like an hour ago near the old fish market, thought it was just some edgy art project until i saw yours and realized its the same font/style. "you did this" is written on literally all of them</p>
+          <div class="attachrow">
+            <div class="attach">
+              <img src="poster3.png" alt="poster">
+              <div class="fname">poster_market1.jpg</div>
+              <div class="viewcount">viewed 1,956 times</div>
+            </div>
+            <div class="attach">
+              <img src="poster4.png" alt="poster">
+              <div class="fname">poster_market2.jpg</div>
+              <div class="viewcount">viewed 1,801 times</div>
+            </div>
+          </div>
+          <p>ngl the fish skeleton one is actually messing with me a little. who even makes these at 3am and just leaves</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 3 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">DB</div>
+        <div class="uname">debunker_dan_</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> Sep 2019<br><b>Posts:</b> 431<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Mon Jun 02, 2026 10:02 pm <span class="postnum"><a href="#p3">#3</a></span></div>
+        <div class="posttext">
+          <p>guys it's a guerrilla marketing campaign for something, has to be. nobody spends real money printing custom posters and wheatpasting them across multiple cities for a "prank." somebody's got a launch coming. calling it now</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 4 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">TL</div>
+        <div class="uname">tidelines</div>
+        <div class="rank">Junior Member</div>
+        <div class="meta"><b>Joined:</b> May 2026<br><b>Posts:</b> 6<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 12:23 am <span class="postnum"><a href="#p4">#4</a></span></div>
+        <div class="posttext">
+          <p>marketing for WHAT though. there's no hashtag, no website in the corner, nothing you'd normally put on an actual ad. i work adjacent to that industry and this doesn't look like any brief i've ever seen lol</p>
+          <p>also found this walking home just now, different handwriting than the posters but feels connected??</p>
+          <div class="attachrow">
+            <div class="attach">
+              <img src="graffiti1.png" alt="graffiti">
+              <div class="fname">wall_stairs.jpg</div>
+              <div class="viewcount">viewed 2,240 times</div>
+            </div>
+          </div>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 5 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">OK</div>
+        <div class="uname">okeanos_watch</div>
+        <div class="rank">Senior Member</div>
+        <div class="meta"><b>Joined:</b> Jan 2015<br><b>Posts:</b> 2,104<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 1:07 am <span class="postnum"><a href="#p5">#5</a></span></div>
+        <div class="posttext">
+          <blockquote class="q"><cite>tidelines wrote:</cite>different handwriting than the posters but feels connected</blockquote>
+          <p>it's spreading fast, there's a whole telegram group forming around this now calling themselves "the surfacers." started as like 40 people trading photos, now it's over 2k in three days. some of them are genuinely convinced something is "coming up" from the ocean and these are like... warnings? or a countdown? idk man it's giving cult but also kind of hard to argue with the timeline of how fast this stuff is spreading</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 6 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">MK</div>
+        <div class="uname">marina_k</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> Nov 2021<br><b>Posts:</b> 204<br><b>Location:</b> coastal, won't say more</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 8:52 am <span class="postnum"><a href="#p6">#6</a></span></div>
+        <div class="posttext">
+          <p>ok "the surfacers" is a real name now?? that's so unsettling lmao. anyway found this on my walk this morning, pink wall by the old shutter shop, definitely not the same handwriting as the stairs one from last night</p>
+          <div class="attachrow">
+            <div class="attach">
+              <img src="graffiti2.png" alt="graffiti">
+              <div class="fname">wall_pink.jpg</div>
+              <div class="viewcount">viewed 4,502 times</div>
+            </div>
+          </div>
+          <p>"they'll make us pay" is a WAY more aggressive vibe than the poster stuff tbh. feels like different people are doing different parts of this</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 7 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">DB</div>
+        <div class="uname">debunker_dan_</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> Sep 2019<br><b>Posts:</b> 432<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 9:15 am <span class="postnum"><a href="#p7">#7</a></span></div>
+        <div class="posttext">
+          <p>ok yeah this is a coordinated campaign, has to be multiple people on payroll doing different "roles" (poster team, graffiti team, forum seeding team probably lol jk... unless). still waiting for the reveal. someone's about to sell us something</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 8 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">RV</div>
+        <div class="uname">reef_vandal</div>
+        <div class="rank">Junior Member</div>
+        <div class="meta"><b>Joined:</b> Jun 2026<br><b>Posts:</b> 2<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 11:48 am <span class="postnum"><a href="#p8">#8</a></span></div>
+        <div class="posttext">
+          <p>not from here but saw this thread linked. one showed up near my building too, different language, spray painted really messy compared to the others. sharing bc it felt important</p>
+          <div class="attachrow">
+            <div class="attach">
+              <img src="graffiti3.png" alt="graffiti">
+              <div class="fname">wall_intl.jpg</div>
+              <div class="viewcount">viewed 3,377 times</div>
+            </div>
+          </div>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 9 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">TL</div>
+        <div class="uname">tidelines</div>
+        <div class="rank">Junior Member</div>
+        <div class="meta"><b>Joined:</b> May 2026<br><b>Posts:</b> 9<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 12:31 pm <span class="postnum"><a href="#p9">#9</a></span></div>
+        <div class="posttext">
+          <blockquote class="q"><cite>reef_vandal wrote:</cite>different language, spray painted really messy compared to the others</blockquote>
+          <p>this is the part that's actually breaking my brain a little. if it was one marketing team you'd expect consistent language/handwriting/quality across cities right? this looks like it's happening independently in multiple places at once which is either 1) a MASSIVE budget or 2) not one campaign at all and people are just... doing this on their own bc they believe something</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 10 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">HP</div>
+        <div class="uname">dr_h_penrose</div>
+        <div class="rank">Verified Member</div>
+        <div class="meta"><b>Joined:</b> Aug 2012<br><b>Posts:</b> 1,340<br><b>Location:</b> museum staff (verified)</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 6:04 pm <span class="postnum"><a href="#p10">#10</a></span></div>
+        <div class="posttext">
+          <p>long time lurker, first post. i work collections at a natural history museum and normally wouldn't touch a thread like this but a colleague sent me this thread and i have to share something. we received an unsolicited donation last week — no paperwork, no donor name, just left at the loading dock — of a carved tablet depicting a humanoid figure with what our epigraphy team is calling "an unclassifiable script." we assumed it was an elaborate hoax or student project honestly</p>
+          <p>after seeing this thread i'm less sure. photographing it properly tomorrow but here's a phone pic i took for our internal slack</p>
+          <div class="attachrow">
+            <div class="attach">
+              <img src="artwork.png" alt="carved tablet">
+              <div class="fname">loading_dock_donation.jpg</div>
+              <div class="viewcount">viewed 9,812 times</div>
+            </div>
+          </div>
+          <p>to be clear i am not saying this is connected to posters on the internet, i'm a scientist not a conspiracy theorist. just found the timing strange enough to mention</p>
+        </div>
+        <div class="postfooter">
+          <span class="sig">— posting under my real credentials so please don't make this weirder than it already is</span>
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 11 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">OK</div>
+        <div class="uname">okeanos_watch</div>
+        <div class="rank">Senior Member</div>
+        <div class="meta"><b>Joined:</b> Jan 2015<br><b>Posts:</b> 2,105<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 6:19 pm <span class="postnum"><a href="#p11">#11</a></span></div>
+        <div class="posttext">
+          <p>DR PENROSE. DR PENROSE THIS IS NOT A DRILL. that carving looks EXACTLY like what the surfacers telegram has been sharing as "the old face" for like two weeks now, i'm not even exaggerating, screenshotting this whole post right now</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 12 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">DB</div>
+        <div class="uname">debunker_dan_</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> Sep 2019<br><b>Posts:</b> 433<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 6:41 pm <span class="postnum"><a href="#p12">#12</a></span></div>
+        <div class="posttext">
+          <p>ok i'll admit the museum donation thing is a genuinely good escalation if this IS marketing. "anonymous artifact donation" is next level ARG stuff. still not convinced but respect if so lol</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- POST 13 -->
+    <tr class="postrow">
+      <td class="userinfo">
+        <div class="avatar">::</div>
+        <div class="uname">████████</div>
+        <div class="rank">Member</div>
+        <div class="meta"><b>Joined:</b> ---<br><b>Posts:</b> 1<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Tue Jun 03, 2026 11:52 pm <span class="postnum"><a href="#p13">#13</a></span></div>
+        <div class="posttext">
+          <p>it is not marketing. stop calling it that. it is not for sale. it is not coming. it is already here and it has been counting since before this website existed</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+        <div class="edited">This account has been banned. Reason: N/A</div>
+      </td>
+    </tr>
+
+    <!-- POST 14 -->
+    <tr class="postrow alt">
+      <td class="userinfo">
+        <div class="avatar">TL</div>
+        <div class="uname">tidelines</div>
+        <div class="rank">Junior Member</div>
+        <div class="meta"><b>Joined:</b> May 2026<br><b>Posts:</b> 10<br><b>Location:</b> ---</div>
+      </td>
+      <td class="postbody">
+        <div class="postheader">Posted: Wed Jun 04, 2026 12:03 am <span class="postnum"><a href="#p14">#14</a></span></div>
+        <div class="posttext">
+          <p>...ok that account was made literally today, one post, banned within minutes. same energy as that thread from a while back about the sonar footage. anyone else keeping a timeline doc for this because i think we're gonna need one</p>
+        </div>
+        <div class="postfooter">
+          <div class="actions"><a href="#">Quote</a><a href="#">Report</a></div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class="quickreply">
+    Quick Reply:
+    <textarea placeholder="You must be logged in to post a reply."></textarea>
+    <div class="btnrow"><button disabled>Submit Reply</button></div>
+  </div>
+
+  <div class="pagejump">
+    Page 1 of 7 &nbsp; <a href="#">&laquo;</a> <span class="current">1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">&raquo;</a>
+  </div>
+
+</div>
+</body>
+</html>
